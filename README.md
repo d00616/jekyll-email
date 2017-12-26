@@ -19,8 +19,12 @@ And then execute:
 Create .env file in root of your jekyll's project
 
 ```
-GMAIL_LOGIN=YOUR_GMAIL_LOGIN
-GMAIL_PASSWORD=YOUR_GMAIL_PASSWORD
+MAIL_HOST=mail.example.com
+MAIL_PORT=587
+MAIL_DOMAIN=example.com
+MAIL_USER=user@example.com
+MAIL_PASSWORD=password
+MAIL_FROM=from@example.com
 RECIPIENTS="recipient1@gmail.com,recipient2@gmail.com"
 ```
 

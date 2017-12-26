@@ -6,8 +6,8 @@ module Jekyll
       OPTIONS = { address:              ENV['MAIL_HOST'],
                   port:                 ENV['MAIL_PORT'],
                   domain:               ENV['MAIL_DOMAIN'],
-                  user_name:            ENV['MAIL_TLS_USER'],
-                  password:             ENV['MAIL_TLS_PASSWORD'],
+                  user_name:            ENV['MAIL_USER'],
+                  password:             ENV['MAIL_PASSWORD'],
                   authentication:       'plain',
                   enable_starttls_auto: true
                 }
