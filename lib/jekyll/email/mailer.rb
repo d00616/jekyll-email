@@ -3,11 +3,11 @@ module Jekyll
     class Mailer
       attr_reader :is_smtp
 
-      OPTIONS = { address:             'smtp.gmail.com',
-                  port:                 587,
-                  domain:               'gmail.com',
-                  user_name:            ENV['GMAIL_LOGIN'],
-                  password:             ENV['GMAIL_PASSWORD'],
+      OPTIONS = { address:              ENV['MAIL_HOST'],
+                  port:                 ENV['MAIL_PORT'],
+                  domain:               ENV['MAIL_DOMAIN'],
+                  user_name:            ENV['MAIL_TLS_USER'],
+                  password:             ENV['MAIL_TLS_PASSWORD'],
                   authentication:       'plain',
                   enable_starttls_auto: true
                 }
@@ -37,7 +37,7 @@ module Jekyll
 
       def deliver_to_recipient(recipient, subject, body)
         Mail.deliver do
-          from    ENV['GMAIL_LOGIN']
+          from    ENV['MAIL_FROM']
           to      recipient
           subject subject
 
